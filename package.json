@@ -1,10 +1,13 @@
 {
-  "name": "srchsubhro",
+  "name": "boil",
   "version": "1.0.0",
-  "description": "search anything from terminal",
-  "main": "srchsubhro.js",
+  "description": "boilerplate code from terminal",
+  "main": "boil.js",
   "bin": {
-    "srchsubhro": "./srchsubhro.js"
+    "boil": "./boil.js"
+  },
+  "scripts": {
+    "postinstall": "node ./postinstall.js"
   },
   "keywords": [
     "gemini",
@@ -12,7 +15,11 @@
     "terminal",
     "cli"
   ],
-  "author": "Subhro",
+  "repository": {
+    "type":"git",
+    
+  },
+  "author": "DipSubhro",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.8.4",
