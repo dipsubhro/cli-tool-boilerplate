@@ -1,13 +1,13 @@
 {
-  "name": "boil",
-  "version": "1.0.0",
+  "name": "boiling-code",
+  "version": "1.0.1",
   "description": "boilerplate code from terminal",
   "main": "boil.js",
   "bin": {
     "boil": "./boil.js"
   },
   "scripts": {
-    "postinstall": "node ./postinstall.js"
+    "postinstall": "node postinstall.js"
   },
   "keywords": [
     "gemini",
@@ -24,6 +24,7 @@
   "dependencies": {
     "axios": "^1.8.4",
     "chalk": "^4.1.2",
-    "dotenv": "^16.5.0"
+    "dotenv": "^16.5.0",
+    "open": "^10.1.2"
   }
 }

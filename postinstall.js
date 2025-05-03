@@ -12,5 +12,5 @@ Your Query
     
 ────────────────────────────────────────────────────────────
     ` +
-    '\n"Thanks for using this tool" - DipSubhro\n'
+    '\nJust run \'boil "Your Query"\' to get started\n\n"Thanks for using this tool" - DipSubhro\n'
 );

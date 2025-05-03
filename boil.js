@@ -3,7 +3,9 @@
 require("dotenv").config();
 const axios = require("axios");
 const chalk = require("chalk");
+const open = require("open").default;
 const readline = require("readline");
+const { version } = require("./package.json");
 
 const API_KEY = process.env.GEMINI_API_KEY;
 const query = process.argv.slice(2).join(" ");
@@ -11,6 +13,81 @@ const query = process.argv.slice(2).join(" ");
 if (!query) {
   console.log(chalk.red("❌ Please provide a query."));
   process.exit(1);
+}
+
+if (query.includes("--help")) {
+  console.log(`
+    Usage: mycli [options]
+    
+    Options:
+      --help             Show help information
+      --version          Show version
+      --get-api-key      Open Gemini API key page in browser
+    
+    Setup your Gemini API key:
+    
+    Run:
+      mycli --get-api-key
+    
+    Then set the API key:
+    
+    Linux / macOS:
+      export GEMINI_API_KEY=your_api_key_here
+    
+    Windows (CMD):
+      set GEMINI_API_KEY=your_api_key_here
+    
+    Windows (PowerShell):
+      $env:GEMINI_API_KEY="your_api_key_here"
+    `);
+  process.exit(0);
+}
+
+if (query.includes("-h")) {
+  console.log(`
+    Usage: mycli [options]
+    
+    Options:
+      --help             Show help information
+      --version          Show version
+      --get-api-key      Open Gemini API key page in browser
+    
+    Setup your Gemini API key:
+    
+    Run:
+      mycli --get-api-key
+    
+    Then set the API key:
+    
+    Linux / macOS:
+      export GEMINI_API_KEY=your_api_key_here
+    
+    Windows (CMD):
+      set GEMINI_API_KEY=your_api_key_here
+    
+    Windows (PowerShell):
+      $env:GEMINI_API_KEY="your_api_key_here"
+    `);
+  process.exit(0);
+}
+
+if (query.includes("--version")) {
+  console.log(version);
+  process.exit(0);
+}
+
+if (query.includes("-v")) {
+  console.log(version);
+  process.exit(0);
+}
+
+if (query.includes("--get-api-key")) {
+  const url = "https://aistudio.google.com/app/apikey";
+  console.log(`🌐 Opening Gemini API Key page in your browser: ${url}`);
+  open(url).catch((err) => {
+    console.error("error opening", err);
+  });
+  process.exit(0);
 }
 
 const codeKeywords = [
