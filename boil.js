@@ -3,7 +3,6 @@
 require("dotenv").config();
 const axios = require("axios");
 const chalk = require("chalk");
-const open = require("open").default;
 const readline = require("readline");
 const { version } = require("./package.json");
 
@@ -84,10 +83,7 @@ if (query.includes("-v")) {
 
 if (query.includes("--get-api-key")) {
   const url = "https://aistudio.google.com/app/apikey";
-  console.log(`🌐 Opening Gemini API Key page in your browser: ${url}`);
-  open(url).catch((err) => {
-    console.error("error opening", err);
-  });
+  console.log(`🌐 Visit this link to open the Gemini API Key page: ${url}`);
   process.exit(0);
 }
 
