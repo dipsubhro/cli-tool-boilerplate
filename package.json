@@ -1,6 +1,6 @@
 {
   "name": "boiling-code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "boilerplate code from terminal",
   "main": "boil.js",
   "bin": {
