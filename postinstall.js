@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 console.log(
-  '\nAdd Your API Key In Global Env Variable - GEMINI_API_KEY="YOUR_API_KEY"\n' +
+  '\nAdd Your Gemini API Key In Global Env Variable - GEMINI_API_KEY="YOUR_API_KEY"\n' +
     `
 ────────────────────────────────────────────────────────────
 Your Query
@@ -12,5 +14,5 @@ Your Query
     
 ────────────────────────────────────────────────────────────
     ` +
-    '\nJust run \'boil "Your Query"\' to get started\n\n"Thanks for using this tool" - DipSubhro\n'
+    "\nJust run 'boil \"Your Query\"' to get started\n\nrun 'boil --help' for more information\n\n\"Thanks for using this tool\" - DipSubhro\n"
 );

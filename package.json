@@ -1,10 +1,11 @@
 {
   "name": "boiling-code",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "boilerplate code from terminal",
   "main": "boil.js",
   "bin": {
-    "boil": "./boil.js"
+    "boil": "./boil.js",
+    "boiling-code": "./postinstall.js"
   },
   "scripts": {
     "postinstall": "node postinstall.js"
